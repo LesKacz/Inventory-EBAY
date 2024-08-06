@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+
+<body>
+    <div class="title" id="title"> Birds</div>
+
+    <div class="dashboard_content_main_p2">
+        <button class="bigButton" id="price" type="button">$1</button>
+        <button class="bigButton" id="page1" type="button">Back to Page 1</button>
+        <button class="bigButton" id="page2" type="button">Back to Page 2</button>
+        <button class="bigButton" id="Jake" type="button">Mallard<img src="images/Jake1.jpg" alt="User image."
+                id="user image"></button>
+    </div>
+
+    <div class="item" id="jake"><img src="images/Jake.jpg" alt=""><span class="quantity"> QTY 3</span>
+    </div>
+</div>
+
+
+
+
+    <script>
+
+        document.getElementById('page2').addEventListener('click', function () {
+            window.location.href = 'page2.html'; // URL to Page 2
+        });
+        document.getElementById('page1').addEventListener('click', function () {
+            window.location.href = 'index.html'; // URL to Page 1
+        });
+
+        document.getElementById('Jake').addEventListener('click', function () {
+            window.location.href = 'page3.html'; // URL to Page 1
+        });
+
+
+    </script>
+
+
+    <script>
+        const Jake = document.getElementById("Jake");
+        Jake.addEventListener("click", function (e) {
+            const price = prompt("This is a $1 Beanie, Do you want it? Y/N");
+            document.body.innerHTML = "<h1> Do you want it?" + Jake + "</h1>";
+        });
+    </script>
+    <script>
+        document.getElementById('Jake').addEventListener('click', function () {
+            document.getElementById('price').scrollIntoView({ behavior: 'smooth' });
+        });
+        document.getElementById('Batty').addEventListener('click', function () {
+            document.getElementById('Page3').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>

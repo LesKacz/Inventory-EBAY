@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inv Salteee</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="https://use.fontawesome.com/0c7a3095b5.js"></script>
+</head>
+
+<body>
+    <div id="dashboardMainContainer">
+        <div class="dashboard_sidebar" id="dashboard_sidebar" style="width:25%; transition: all 0.5s ease 0s;">
+            <h3 class="dashboard_logo" id="dashboard_logo" style="font-size:25px;">Salteee's</h3>
+            <div class="dashboard_sidebar_user">
+                <img src="images/Jake1.jpg" alt="User image." id="user image">
+                <span>Products</span>
+            </div>
+            <div class="dashboard_sidebar_menus">
+                <ul class="dashboard_menu_lists" style="text-align: center;">
+                    <li class="menuActive">
+                       
+                        <button class="menuButton" id="myBtn"  type="button">Beanie Babies</button>
+                        <button class="menuButton" id="myBtn1" type="button">Bears</button>
+                        <button class="menuButton" id="myBtn2" type="button">Birds</button>
+                        <button class="menuButton" id="myBtn3" type="button">Animals</button>
+                        <button class="menuButton" id="myBtn4" type="button">Baseball Cards</button>
+                        <button class="menuButton" id="myBtn5" type="button">Dolls</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dashboard_content_container" id="dashboard_content_container" style="width: 80%;">
+            <div class="dashboard_topNav">
+                <a href="" id="toggleBtn"><i class="fa fa-navicon"></i></a>
+                <a href="" id="logoutBtn"><i class="fa fa-power-off"></i>Log-out</a>
+            </div>
+            <div class="dashboard_content">
+                <div class="dashboard_content_main">
+                  
+                    <button class="bigButton" id="index" type="button">Page2</button> 
+                    <button class="bigButton" id="page3" type="button">Page3</button>                 
+                    <button class="bigButton" id="myBtn00" type="button">Beanie Babies</button>
+                    <button class="bigButton" id="myBtn11" type="button">Beanie Bears</button>
+                    <button class="bigButton" id="myBtn22" type="button">Beanie Birds</button>
+                    <button class="bigButton" id="myBtn33" type="button">Beanie Animals</button>
+                    <button class="bigButton" id="myBtn44" type="button">Baseball Cards</button>
+                    <button class="bigButton" id="myBtn55" type="button">Dolls</button>
+     </div>
+</div>
+
+    <script>
+         document.getElementById('page3').addEventListener('click', function () {
+                window.location.href = 'page3.html'; // URL to Page 1
+            });
+         document.getElementById('index').addEventListener('click', function () {
+                window.location.href = 'page2.html'; // URL to Page 1
+            });
+        
+        document.getElementById('myBtn00').addEventListener('click', function() {
+            window.location.href = 'page2.html';
+ 
+        });
+        document.getElementById('myBtn11').addEventListener('click', function() {
+            window.location.href = 'page3.html';
+ 
+        });
+        document.getElementById('Jake').addEventListener('click', function() {
+            window.location.href = 'index.html';
+ 
+        });
+   
+        document.getElementById('myBtn').addEventListener('click', function() {
+             document.getElementById('myBtn55').scrollIntoView({ behavior: 'smooth' });
+       });
+    </script>
+    
+<script>
+    function scrollToButton() {
+        document.getElementById('targetButton').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+<!--button click stuff-->
+    <script>
+         const myBtn00 = document.getElementById("myBtn00");
+         myBtn00.addEventListener("click", function (e) {
+             const BB = prompt("Which Beanie are you looking for?");
+             document.body.innerHTML = "<h1> OK the, " + BB + "</h1>";
+         });
+        const myBtn11 = document.getElementById("myBtn11");
+        myBtn11.addEventListener("click", function (e) {
+            const Bear = prompt("Which Bear are you looking for?");
+            document.body.innerHTML = "<h1> OK the, " + Bear + "</h1>";
+        });
+        const myBtn22 = document.getElementById("myBtn22");
+        myBtn22.addEventListener("click", function (e) {
+            const Bird = prompt("Which Bird are you looking for?");
+            document.body.innerHTML = "<h1> OK the, " + Bird + "</h1>";
+        });
+        const myBtn33 = document.getElementById("myBtn33");
+        myBtn33.addEventListener("click", function (e) {
+            const Animal = prompt("Which Animal are you looking for?");
+            document.body.innerHTML = "<h1> OK the, " + Animal + "</h1>";
+        });
+        const myBtn44 = document.getElementById("myBtn44");
+        myBtn44.addEventListener("click", function (e) {
+            const Base = prompt("Which Card are you looking for?");
+            document.body.innerHTML = "<h1> OK the, " + Base + "</h1>";
+        });
+       <!-- const myBtn55 = document.getElementById("myBtn55");
+        myBtn55.addEventListener("click", function (e) {
+            const Doll = prompt("Which Doll are you looking for?");
+            document.body.innerHTML = "<h1> OK the, " + Doll + "</h1>";
+        });-->
+    </script>
+    <script>
+        var sideBarIsOpen = true;
+        toggleBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            if (sideBarIsOpen) {
+                dashboard_sidebar.style.width = '10%';
+                dashboard_sidebar.style.transition = '0.3s all';
+                dashboard_content_container.style.width = '80%';
+                dashboard_logo.style.fontSize = '60px';
+                userImage.style.width = '60px';
+
+                menuIcons = document.getElementsByClassName('menuText');
+                for (var i = 0; i < menuIcons.length; i++) {
+                    menuIcons[i].style.display = 'none';
+                }
+
+                document.getElementsByClassName('dashboard_menu_lists')[0].style.textAlign = 'center';
+                sideBarIsOpen = false;
+            } else {
+                dashboard_sidebar.style.width = '20%';
+                dashboard_sidebar.style.transition = '0.5s all';
+                dashboard_content_container.style.width = '80%';
+                dashboard_logo.style.fontSize = '80px';
+                userImage.style.width = '80px';
+                menuIcons = document.getElementsByClassName('menuText');
+                for (var i = 0; i < menuIcons.length; i++) {
+                    menuIcons[i].style.display = 'inline-block';
+                }
+                document.getElementsByClassName('dashboard_menu_lists')[0].style.textAlign = 'normal';
+                sideBarIsOpen = true;
+            });
+    </script>
+
+</body>
+
+</html>
